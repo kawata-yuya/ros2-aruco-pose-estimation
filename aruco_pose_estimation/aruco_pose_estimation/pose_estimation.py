@@ -217,7 +217,7 @@ def depth_to_pointcloud_centroid(depth_image: np.array, intrinsic_matrix: np.arr
         pointcloud.append([x, y, z])
 
     # Calculate centroid from pointcloud
-    centroid = np.mean(np.array(pointcloud, dtype=np.uint16), axis=0)
+    centroid = np.mean(np.array(pointcloud, dtype=np.float32), axis=0)
 
     return centroid
 
